@@ -1,0 +1,41 @@
+Open the terminal and execute the following commands :
+
+ 
+
+1. Update the package information :
+
+sudo apt update
+
+ 
+
+2. Install dkms and git :
+
+sudo apt install dkms git
+
+ 
+
+3. Install Build Dependencies :
+
+sudo apt install build-essential libelf-dev linux-headers-$(uname -r)
+
+ 
+
+4. Download the Driver files using git :
+
+git clone https://github.com/aircrack-ng/rtl8812au.git
+
+   
+
+5. Navigate to the Downloaded directory :
+
+   
+
+cd rtl8812au
+
+   
+
+6. Install the Driver
+
+sudo make dkms_install
+
+if the installation is aborted , execute this command '''sudo dkms remove 8812au/5.6.4.2_35491.20191025 --all''' , if errors pop up '''Usage: remove / --all'''
